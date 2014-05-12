@@ -36,11 +36,14 @@ if (array_key_exists('check_submit', $_POST))
           case "D3":
             echo "On a scale from 1(worst) to 5(best), how approachable am I?";
             echo "<br>";
+            echo "(worst)";
             echo '<input type="radio" name="Approachable" value="1" /> 1';
             echo '<input type="radio" name="Approachable" value="2" /> 2';
             echo '<input type="radio" name="Approachable" value="3" /> 3';
             echo '<input type="radio" name="Approachable" value="4" /> 4';
             echo '<input type="radio" name="Approachable" value="5" /> 5';
+            echo str_repeat('&nbsp;', 4);
+            echo "(best)";
             echo "<br>";
         }
         echo "<br>";
@@ -56,11 +59,14 @@ if (array_key_exists('check_submit', $_POST))
       }
       else
       {
+        echo "(worst)";
         echo '<input type="radio" name="Q1R" value="1" /> 1';
         echo '<input type="radio" name="Q1R" value="2" /> 2';
         echo '<input type="radio" name="Q1R" value="3" /> 3';
         echo '<input type="radio" name="Q1R" value="4" /> 4';
         echo '<input type="radio" name="Q1R" value="5" /> 5';
+        echo str_repeat('&nbsp;', 4);
+        echo "(best)";
       }
       echo "<br>";
       echo "<br>";
@@ -76,11 +82,14 @@ if (array_key_exists('check_submit', $_POST))
       }
       else
       {
+        echo "(worst)";
         echo '<input type="radio" name="Q2R" value="1" /> 1';
         echo '<input type="radio" name="Q2R" value="2" /> 2';
         echo '<input type="radio" name="Q2R" value="3" /> 3';
         echo '<input type="radio" name="Q2R" value="4" /> 4';
         echo '<input type="radio" name="Q2R" value="5" /> 5';
+        echo str_repeat('&nbsp;', 4);
+        echo "(best)";
       }
       echo "<br>";
       echo "<br>";
