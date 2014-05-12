@@ -1,1 +1,37 @@
 <html>
+<head>
+	<title>
+		Test form
+	</title>
+</head>
+<body>
+Let's figure out what questions you want answered!<br>
+<br>
+<br>
+Here's a list of recommended questions you can use:
+  <form name="myform" action="process.php" method="POST">
+    <input type="hidden" name="check_submit" value="1" />
+	<input type = "checkbox" name ="Defaults[]" value = "D1"/> What is my biggest weakness?<br>
+	<input type = "checkbox" name ="Defaults[]" value = "D2"/> What is my biggest strength?<br>
+	<input type = "checkbox" name ="Defaults[]" value = "D3"/> On a scale from 1(worst) to 5(best), how approachable am I?<br>
+	<br>
+	<br>
+	Or you can create your own questions:<br>
+	<br>
+    Question 1: <input type="text" name="Q1" size="100"/><br />
+    Select response type: <select name ="R1">
+    	<option value = "Text Response" selected = "selected"> Text Response </option>
+    	<option value = "Radio Buttons"> Radio Buttons </option>
+    </select>
+    <br>
+    <br>
+    Question 2: <input type="text" name="Q2" size="100"/><br />
+    Select response type: <select name ="R2">
+    	<option value = "Text Response" selected = "selected"> Text Response </option>
+    	<option value = "Radio Buttons"> Radio Buttons </option>
+    </select>
+    <br>
+    <input type="submit" />
+  </form>
+</body>
+</html>
