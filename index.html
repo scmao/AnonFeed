@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>
+		index
+	</title>
+	<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+		api_key: 77605mmemrjhvr
+		authorize: true
+	</script>	
+</head>
+<body>
+	<script type="IN/Login"> 
+			<form action="/register.html"> 
+			<p>Your Name: <input type="text" name="name" value="<?js= firstName ?> <?js= lastName ?>" /></p>
+			<p>Your Password: <input type="password" name="password" /></p>
+			<input type="hidden" name="linkedin-id" value="<?js= id ?>" />
+			<input type="submit" name="submit" value="Sign Up"/>
+		</form>
+		<a href="javascript:void(0)" onClick="IN.User.logout()">Logout</a>
+	</script>
+</body>	
+</html>

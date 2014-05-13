@@ -8,6 +8,7 @@
 </head>
 
 <?php
+$counter = 1;
 //Check whether the form has been submitted
 if (array_key_exists('check_submit', $_POST)) 
 {
@@ -21,19 +22,25 @@ if (array_key_exists('check_submit', $_POST))
       {
         switch($_POST['Defaults'][$x])
         {
-          case "D1":      
+          case "D1":
+            echo "$counter.&nbsp";
+            $counter++; 
             echo "What is my biggest weakness?";
             echo "<br>";
             echo '<input type="text" name="D1" size="100"/><br />';
             break;
         
           case "D2":
+            echo "$counter.&nbsp";
+            $counter++; 
             echo "What is my biggest strength?";
             echo "<br>";
             echo '<input type="text" name="D2" size="100"/><br />';
             break;
 
           case "D3":
+            echo "$counter.&nbsp";
+            $counter++; 
             echo "On a scale from 1(worst) to 5(best), how approachable am I?";
             echo "<br>";
             echo "(worst)";
@@ -42,7 +49,7 @@ if (array_key_exists('check_submit', $_POST))
             echo '<input type="radio" name="Approachable" value="3" /> 3';
             echo '<input type="radio" name="Approachable" value="4" /> 4';
             echo '<input type="radio" name="Approachable" value="5" /> 5';
-            echo str_repeat('&nbsp;', 4);
+            echo str_repeat('&nbsp;', 5);
             echo "(best)";
             echo "<br>";
         }
@@ -52,6 +59,8 @@ if (array_key_exists('check_submit', $_POST))
     }
     if(!empty($_POST['Q1']))
     {
+      echo "$counter.&nbsp";
+      $counter++; 
       echo "{$_POST['Q1']}<br />";
       if($_POST['R1'] == "TR")
       {
@@ -65,7 +74,7 @@ if (array_key_exists('check_submit', $_POST))
         echo '<input type="radio" name="Q1R" value="3" /> 3';
         echo '<input type="radio" name="Q1R" value="4" /> 4';
         echo '<input type="radio" name="Q1R" value="5" /> 5';
-        echo str_repeat('&nbsp;', 4);
+        echo str_repeat('&nbsp;', 5);
         echo "(best)";
       }
       echo "<br>";
@@ -75,6 +84,8 @@ if (array_key_exists('check_submit', $_POST))
 
     if(!empty($_POST['Q2']))
     {
+      echo "$counter.&nbsp";
+      $counter++; 
       echo "{$_POST['Q2']}<br />";
       if($_POST['R2'] == "TR")
       {
@@ -88,7 +99,7 @@ if (array_key_exists('check_submit', $_POST))
         echo '<input type="radio" name="Q2R" value="3" /> 3';
         echo '<input type="radio" name="Q2R" value="4" /> 4';
         echo '<input type="radio" name="Q2R" value="5" /> 5';
-        echo str_repeat('&nbsp;', 4);
+        echo str_repeat('&nbsp;', 5);
         echo "(best)";
       }
       echo "<br>";
