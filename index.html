@@ -10,10 +10,14 @@
 </head>
 <body>
 	<script type="IN/Login"> 
-			<form action="/register.html"> 
-			<p>Your Name: <input type="text" name="name" value="<?js= firstName ?> <?js= lastName ?>" /></p>
+			<form action="/register.html">
+			<h1> Register: </h1> 
+			<p>First Name: <input type="text" name="first_Name" value="<?js= firstName ?>" /></p>
+			<p>Last Name: <input type = "text" name = "last_Name" value =" <?js= lastName ?>" /> </p>
+			<p>Username: <input type = "text" name = "user_name" /></p>
 			<p>Your Password: <input type="password" name="password" /></p>
 			<input type="hidden" name="linkedin-id" value="<?js= id ?>" />
+			<input type="hidden" name="date" value="<?php echo time(); ?>" />
 			<input type="submit" name="submit" value="Sign Up"/>
 		</form>
 		<a href="javascript:void(0)" onClick="IN.User.logout()">Logout</a>
